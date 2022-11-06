@@ -5,7 +5,10 @@ import styles from './Home.module.scss'
 export const Home: FC = () => {
   return (
     <Layout>
-      <div className={styles.home}>home</div>
+      <div className={styles.home}>
+        <h2>Some fun questions</h2>
+        <button>Start</button>
+      </div>
     </Layout>
   )
 }
