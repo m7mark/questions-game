@@ -1,0 +1,6 @@
+.layout {
+  @apply flex justify-center;
+  .layoutWrapper {
+    @apply bg-blue-500 min-h-screen max-w-sm w-full;
+  }
+}
