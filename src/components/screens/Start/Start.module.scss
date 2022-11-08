@@ -1,0 +1,11 @@
+.start {
+  @apply min-h-[85%] flex flex-col items-center justify-between;
+
+  > h2 {
+    @apply text-xl font-bold mt-20;
+  }
+
+  > button {
+    @apply bg-black p-4 text-white rounded-md mb-10 min-w-[80%] hover:bg-gray-800 transition-colors;
+  }
+}

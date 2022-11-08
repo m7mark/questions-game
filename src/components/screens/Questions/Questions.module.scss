@@ -1,0 +1,15 @@
+.questions {
+  @apply h-full flex flex-col items-center justify-between;
+
+  > h2 {
+    @apply text-xl font-bold mt-20;
+  }
+
+  > .buttons {
+    @apply flex h-32 w-full gap-4;
+
+    > button {
+      @apply block flex-grow bg-black text-white hover:bg-gray-800 transition-colors;
+    }
+  }
+}
