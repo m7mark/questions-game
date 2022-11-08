@@ -1,5 +1,5 @@
-import { Home } from '../src/components/screens/Home'
+import { Start } from '../src/components/screens/Start/Start'
 
 export default function HomePage() {
-  return <Home />
+  return <Start />
 }

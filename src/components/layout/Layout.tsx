@@ -11,7 +11,7 @@ export const Layout: FC<ILayout> = ({ children }) => {
     <div className={styles.layout}>
       <div className={styles.layoutWrapper}>
         <Header />
-        {children}
+        <div className={styles.layoutBlock}>{children}</div>
       </div>
     </div>
   )
