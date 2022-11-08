@@ -1,8 +1,12 @@
 .questions {
   @apply h-full flex flex-col items-center justify-between;
 
+  > .counter {
+    @apply mt-8;
+  }
+
   > h2 {
-    @apply text-xl font-bold mt-20;
+    @apply text-xl font-bold text-center;
   }
 
   > .buttons {
