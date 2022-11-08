@@ -10,10 +10,10 @@
   }
 
   > .buttons {
-    @apply flex h-32 w-full gap-4;
+    @apply flex w-full gap-4;
 
     > button {
-      @apply block flex-grow bg-black text-white hover:bg-gray-800 transition-colors;
+      @apply btn flex-grow text-5xl flex items-center justify-center;
     }
   }
 }

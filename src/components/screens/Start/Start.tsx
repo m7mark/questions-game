@@ -9,7 +9,7 @@ export const Start: FC = () => {
     <Layout>
       <div className={styles.start}>
         <h2>Some fun questions</h2>
-        <button onClick={() => router.push('questions')}>Start</button>
+        <button onClick={() => router.push('questions')}>Играть</button>
       </div>
     </Layout>
   )

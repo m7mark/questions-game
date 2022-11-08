@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { Layout } from '../../layout/Layout'
 import styles from './Questions.module.scss'
 import { useQuestions } from './useQuestions'
+import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md'
 
 export const Questions: FC = () => {
   const { num, countElements, currentQuestion, setQuestion } = useQuestions()
@@ -11,8 +12,12 @@ export const Questions: FC = () => {
         <div className={styles.counter}>{`${num}/${countElements}`}</div>
         <h2>{currentQuestion}</h2>
         <div className={styles.buttons}>
-          <button onClick={() => setQuestion('prev')}>Prev</button>
-          <button onClick={() => setQuestion('next')}>Next</button>
+          <button onClick={() => setQuestion('prev')}>
+            <MdArrowBackIos />
+          </button>
+          <button onClick={() => setQuestion('next')}>
+            <MdArrowForwardIos />
+          </button>
         </div>
       </div>
     </Layout>
