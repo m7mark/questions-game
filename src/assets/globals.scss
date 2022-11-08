@@ -18,3 +18,12 @@ body {
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
 }
+
+// mobile viewport bug fix
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    body {
+      min-height: -webkit-fill-available;
+    }
+  }
+}
