@@ -2,7 +2,7 @@
   @apply flex justify-center;
 
   > .layoutWrapper {
-    @apply relative h-screen max-w-sm w-full;
+    @apply relative h-screen max-h-full max-w-sm w-full;
 
     > .layoutBlock {
       @apply block h-full bg-blue-100;
