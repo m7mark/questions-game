@@ -12,6 +12,9 @@ module.exports = {
         h2: {
           fontSize: theme('fontSize.2xl'),
           fontWeight: 'bold',
+          textAlign: 'center',
+          paddingRight: '0.5rem',
+          paddingLeft: '0.5rem',
         },
       })
       addComponents({

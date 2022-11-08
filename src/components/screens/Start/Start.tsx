@@ -8,7 +8,7 @@ export const Start: FC = () => {
   return (
     <Layout>
       <div className={styles.start}>
-        <h2>Some fun questions</h2>
+        <h2>Самые интересные вопросы на знакомство</h2>
         <button onClick={() => router.push('questions')}>Играть</button>
       </div>
     </Layout>
