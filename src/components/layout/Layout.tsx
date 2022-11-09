@@ -3,6 +3,8 @@ import { Header } from './Header/Header'
 import { HeaderSeo } from './Header/HeaderSeo'
 import styles from './Layout.module.scss'
 import Div100vh from 'react-div-100vh'
+import Image from 'next/image'
+import img from '../../assets/imgs/img.svg'
 
 interface ILayout {
   children: ReactNode
@@ -12,6 +14,12 @@ export const Layout: FC<ILayout> = ({ children }) => {
   return (
     <div className={styles.layout}>
       <div className={styles.layoutWrapper}>
+        <Image
+          alt=""
+          src={img}
+          fill
+          style={{ objectFit: 'cover', zIndex: '-3' }}
+        />
         <HeaderSeo />
         <Header />
         <Div100vh>{children}</Div100vh>

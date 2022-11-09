@@ -1,15 +1,25 @@
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { Layout } from '../../layout/Layout'
 import styles from './Start.module.scss'
+import friends from '../../../assets/imgs/friends.svg'
+import { FaPlayCircle } from 'react-icons/fa'
 
 export const Start: FC = () => {
   const router = useRouter()
   return (
     <Layout>
       <div className={styles.start}>
-        <h2>Самые интересные вопросы на знакомство</h2>
-        <button onClick={() => router.push('questions')}>Играть</button>
+        <Image alt="" src={friends} className={styles.friends} />
+        <div className={styles.title}>
+          <h2>Самые</h2>
+          <h2 style={{ backgroundColor: 'red' }}>интересные</h2>
+          <h2>вопросы</h2>
+        </div>
+        <button onClick={() => router.push('questions')}>
+          <FaPlayCircle />
+        </button>
       </div>
     </Layout>
   )

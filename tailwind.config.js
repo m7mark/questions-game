@@ -15,6 +15,7 @@ module.exports = {
           textAlign: 'center',
           paddingRight: '0.5rem',
           paddingLeft: '0.5rem',
+          color: theme('colors.white'),
         },
       })
       addComponents({
@@ -22,21 +23,19 @@ module.exports = {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: theme('colors.black'),
+          backgroundColor: '#302e38',
           color: theme('colors.white'),
           fontSize: theme('fontSize.xl'),
-          height: theme('height.32'),
-          width: theme('width.full'),
           transition: 'background-color .2s ease-in-out',
           '@media (hover: hover)': {
             '&:hover': {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: '#484554',
             },
           },
           '@media screen and (max-width: 430px)': {
             transitionProperty: 'none',
             '&:active': {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: '#484554',
             },
           },
         },

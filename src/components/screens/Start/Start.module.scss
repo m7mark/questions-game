@@ -1,11 +1,19 @@
 .start {
   @apply h-full flex flex-col items-center justify-between;
 
-  > h2 {
-    @apply mt-40 text-white;
+  > .friends {
+    @apply mt-8 w-3/4 max-w-xs;
+  }
+
+  > .title {
+    @apply -mt-20;
+
+    > h2 {
+      @apply text-5xl leading-tight max-[380px]:text-4xl;
+    }
   }
 
   > button {
-    @apply btn text-3xl rounded-[2rem] h-28 mb-4 bg-gradient-to-r from-[#4a4552] to-[#60586f];
+    @apply btn text-5xl rounded-full mb-8 p-6;
   }
 }

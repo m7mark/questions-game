@@ -2,7 +2,12 @@ import { FC } from 'react'
 import { Layout } from '../../layout/Layout'
 import styles from './Questions.module.scss'
 import { useQuestions } from './useQuestions'
-import { MdArrowBackIos, MdArrowForwardIos, MdArrowBack } from 'react-icons/md'
+import {
+  FaChevronRight,
+  FaChevronLeft,
+  FaArrowCircleLeft,
+  FaLongArrowAltLeft,
+} from 'react-icons/fa'
 import { useRouter } from 'next/router'
 
 export const Questions: FC = () => {
@@ -11,22 +16,16 @@ export const Questions: FC = () => {
   return (
     <Layout>
       <div className={styles.questions}>
-        <div className={styles.topContainer}>
-          <div className={styles.back} onClick={() => push('/')}>
-            <MdArrowBack />
-          </div>
-          <div className={styles.counter}>{`${num}/${countElements}`}</div>
-        </div>
-        <div className={styles.bottomContainer}>
-          <h2>{currentQuestion}</h2>
-          <div className={styles.buttons}>
-            <button onClick={() => setQuestion('prev')}>
-              <MdArrowBackIos style={{ marginLeft: '18px' }} />
-            </button>
-            <button onClick={() => setQuestion('next')}>
-              <MdArrowForwardIos />
-            </button>
-          </div>
+        <FaArrowCircleLeft className={styles.back} onClick={() => push('/')} />
+        <div className={styles.counter}>{`${num}/${countElements}`}</div>
+        <h2>{currentQuestion}</h2>
+        <div className={styles.buttons}>
+          <button onClick={() => setQuestion('prev')}>
+            <FaChevronLeft />
+          </button>
+          <button onClick={() => setQuestion('next')}>
+            <FaChevronRight />
+          </button>
         </div>
       </div>
     </Layout>
