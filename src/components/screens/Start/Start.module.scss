@@ -2,10 +2,10 @@
   @apply h-full flex flex-col items-center justify-between;
 
   > h2 {
-    @apply mt-40;
+    @apply mt-40 text-white;
   }
 
   > button {
-    @apply btn text-3xl flex-grow-0;
+    @apply btn text-3xl rounded-[2rem] h-28 mb-4 bg-gradient-to-r from-[#4a4552] to-[#60586f];
   }
 }
