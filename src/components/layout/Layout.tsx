@@ -19,6 +19,7 @@ export const Layout: FC<ILayout> = ({ children }) => {
           src={img}
           fill
           style={{ objectFit: 'cover', zIndex: '-3' }}
+          priority
         />
         <HeaderSeo />
         <Header />

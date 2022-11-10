@@ -8,8 +8,6 @@ export const useQuestions = () => {
   const [currentQuestion, setCurrentQuestion] = useState<string>()
   const [num, setNum] = useState<number>(0)
 
-  console.log(shuffledArray)
-
   useEffect(() => {
     if (!shuffledArray) {
       setShuffledArray(shuffle(questionsData))

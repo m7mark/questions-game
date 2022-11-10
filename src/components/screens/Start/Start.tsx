@@ -11,7 +11,7 @@ export const Start: FC = () => {
   return (
     <Layout>
       <div className={styles.start}>
-        <Image alt="" src={friends} className={styles.friends} />
+        <Image alt="friends" src={friends} className={styles.friends} />
         <div className={styles.title}>
           <h2>Самые</h2>
           <h2 style={{ backgroundColor: 'red' }}>интересные</h2>

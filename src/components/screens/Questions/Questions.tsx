@@ -6,7 +6,6 @@ import {
   FaChevronRight,
   FaChevronLeft,
   FaArrowCircleLeft,
-  FaLongArrowAltLeft,
 } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 
