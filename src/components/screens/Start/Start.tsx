@@ -4,8 +4,11 @@ import { FC } from 'react'
 import styles from './Start.module.scss'
 import friends from '../../../assets/imgs/friends.svg'
 import { FaPlayCircle } from 'react-icons/fa'
+import { useKeyPress } from '../../../hooks/useKeys'
 
 export const Start: FC = () => {
+  useKeyPress(() => router.push('questions'), ['Enter', ' '])
+
   const router = useRouter()
   return (
     <div className={styles.start}>

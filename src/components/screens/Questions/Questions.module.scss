@@ -18,10 +18,6 @@
 
     > button {
       @apply btn text-5xl rounded-full mb-8 p-6;
-
-      > .backIcon {
-        @apply transform scale-x-[-1,1];
-      }
     }
   }
 }

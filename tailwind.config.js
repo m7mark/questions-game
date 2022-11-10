@@ -40,6 +40,10 @@ module.exports = {
           color: theme('colors.white'),
           fontSize: theme('fontSize.xl'),
           transition: 'background-color .2s ease-in-out',
+          '&:disabled': {
+            opacity: '0.3',
+            pointerEvents: 'none',
+          },
           '@media (hover: hover)': {
             '&:hover': {
               backgroundColor: theme('colors.viola.700'),
