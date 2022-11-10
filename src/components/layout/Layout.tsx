@@ -20,6 +20,7 @@ export const Layout: FC<ILayout> = ({ children }) => {
           fill
           style={{ objectFit: 'cover', zIndex: '-3' }}
           priority
+          sizes="(max-width: 768px) 100vw"
         />
         <HeaderSeo />
         <Header />
