@@ -9,7 +9,12 @@ export const Start: FC = () => {
   const router = useRouter()
   return (
     <div className={styles.start}>
-      <Image alt="friends" src={friends} className={styles.friends} />
+      <Image
+        alt="friends"
+        src={friends}
+        className={styles.friends}
+        draggable={false}
+      />
       <div className={styles.title}>
         <h2>Самые</h2>
         <h2 style={{ backgroundColor: 'red' }}>интересные</h2>

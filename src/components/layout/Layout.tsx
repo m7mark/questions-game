@@ -4,7 +4,7 @@ import { HeaderSeo } from './Header/HeaderSeo'
 import styles from './Layout.module.scss'
 import Div100vh from 'react-div-100vh'
 import Image from 'next/image'
-import img from '../../assets/imgs/img.svg'
+import bgImg from '../../assets/imgs/bgImg.svg'
 
 interface ILayout {
   children: ReactNode
@@ -16,7 +16,7 @@ export const Layout: FC<ILayout> = ({ children }) => {
       <div className={styles.layoutWrapper}>
         <Image
           alt=""
-          src={img}
+          src={bgImg}
           fill
           style={{ objectFit: 'cover', zIndex: '-3' }}
           priority
