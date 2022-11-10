@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import styles from './Questions.module.scss'
 import { useQuestions } from './useQuestions'
 import {
@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 export const Questions: FC = () => {
   const { num, countElements, currentQuestion, setQuestion } = useQuestions()
   const { push } = useRouter()
+
   return (
     <div className={styles.questions}>
       <FaArrowCircleLeft className={styles.back} onClick={() => push('/')} />

@@ -14,6 +14,7 @@ export const Start: FC = () => {
         src={friends}
         className={styles.friends}
         draggable={false}
+        priority
       />
       <div className={styles.title}>
         <h2>Самые</h2>
