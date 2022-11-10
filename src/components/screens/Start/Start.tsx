@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { FC } from 'react'
 import styles from './Start.module.scss'
 import friends from '../../../assets/imgs/friends.svg'
-import { FaPlayCircle } from 'react-icons/fa'
+import { FaPlayCircle, FaInfoCircle } from 'react-icons/fa'
 import { useKeyPress } from '../../../hooks/useKeys'
 
 export const Start: FC = () => {
@@ -12,6 +12,7 @@ export const Start: FC = () => {
   const router = useRouter()
   return (
     <div className={styles.start}>
+      <FaInfoCircle className={styles.info} />
       <Image
         alt="friends"
         src={friends}
