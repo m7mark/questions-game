@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
-import { Layout } from '../../layout/Layout'
 import styles from './Start.module.scss'
 import friends from '../../../assets/imgs/friends.svg'
 import { FaPlayCircle } from 'react-icons/fa'

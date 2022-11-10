@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { Layout } from '../../layout/Layout'
 import styles from './Questions.module.scss'
 import { useQuestions } from './useQuestions'
 import {
