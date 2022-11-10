@@ -10,7 +10,6 @@ export function useKeyPress(callBack: () => void, targetKey: string[]): void {
   }
   // If released key is our target key then set to false
   const upHandler = ({ key }: { key: string }): void => {
-    console.log(key)
     if (targetKey.includes(key)) {
       setKeyPressed(false)
     }

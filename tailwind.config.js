@@ -17,7 +17,14 @@ module.exports = {
         800: '#302e38',
       },
     },
-    extend: {},
+    extend: {
+      transitionTimingFunction: {
+        DEFAULT: 'ease-in-out',
+      },
+      transitionDuration: {
+        DEFAULT: '200ms',
+      },
+    },
   },
   plugins: [
     plugin(function ({ addBase, addComponents, theme }) {
