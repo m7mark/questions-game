@@ -1,9 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require('tailwindcss/plugin')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: ['./pages/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      black: colors.black,
+      white: colors.white,
+      gray: colors.gray,
+      dark: '#151419',
+      viola: {
+        600: '#605c70',
+        700: '#484554',
+        800: '#302e38',
+      },
+    },
     extend: {},
   },
   plugins: [
@@ -23,19 +36,19 @@ module.exports = {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#302e38',
+          backgroundColor: theme('colors.viola.800'),
           color: theme('colors.white'),
           fontSize: theme('fontSize.xl'),
           transition: 'background-color .2s ease-in-out',
           '@media (hover: hover)': {
             '&:hover': {
-              backgroundColor: '#484554',
+              backgroundColor: theme('colors.viola.700'),
             },
           },
           '@media screen and (max-width: 430px)': {
             transitionProperty: 'none',
             '&:active': {
-              backgroundColor: '#484554',
+              backgroundColor: theme('colors.viola.700'),
             },
           },
         },
