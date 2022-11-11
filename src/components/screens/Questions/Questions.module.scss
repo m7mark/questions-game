@@ -14,10 +14,10 @@
   }
 
   > .buttons {
-    @apply flex w-full gap-4 justify-between sm:justify-center sm:gap-20;
+    @apply flex w-full mb-8 gap-4 justify-between sm:justify-center sm:gap-20;
 
     > button {
-      @apply btn text-5xl rounded-full mb-8 p-6;
+      @apply btn text-5xl rounded-full p-6;
     }
   }
 }

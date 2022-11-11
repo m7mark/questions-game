@@ -18,7 +18,7 @@
   }
 
   > button {
-    @apply btn text-5xl rounded-full mb-16 p-6 sm:mb-0;
+    @apply btn text-5xl rounded-full mb-8 p-6 sm:mb-0 sm:px-12;
 
     > svg {
       @apply pl-1;

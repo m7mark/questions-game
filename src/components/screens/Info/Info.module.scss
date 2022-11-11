@@ -1,16 +1,16 @@
 .info {
-  @apply h-full flex flex-col items-center justify-center text-gray-100 text-center;
+  @apply h-full flex flex-col items-center justify-center text-gray-100 font-bold text-center;
 
   > .back {
     @apply absolute top-6 left-6 text-4xl fill-hover;
   }
 
   > .about {
-    @apply text-xl sm:max-w-xl sm:text-3xl md:max-w-2xl md:text-4xl md:leading-tight xl:max-w-3xl;
+    @apply text-xl  sm:max-w-xl sm:text-3xl md:max-w-2xl md:text-4xl md:leading-tight xl:max-w-3xl;
   }
 
   > .creator {
-    @apply mt-10 text-xl sm:text-2xl md:text-3xl font-bold text-gray-500 border-t border-gray-500 pt-7;
+    @apply mt-10 text-xl sm:text-2xl md:text-3xl text-gray-500 border-t-2 border-gray-500 pt-7;
 
     > a {
       @apply ml-2 cursor-pointer hover:text-gray-300 transition-colors whitespace-nowrap;
