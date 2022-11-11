@@ -7,12 +7,16 @@ import { FaPlayCircle, FaInfoCircle } from 'react-icons/fa'
 import { useKeyPress } from '../../../hooks/useKeys'
 
 export const Start: FC = () => {
+  const router = useRouter()
+
   useKeyPress(() => router.push('questions'), ['Enter', ' '])
 
-  const router = useRouter()
   return (
     <div className={styles.start}>
-      <FaInfoCircle className={styles.info} />
+      <FaInfoCircle
+        className={styles.info}
+        onClick={() => router.push('info')}
+      />
       <Image
         alt="friends"
         src={friends}
