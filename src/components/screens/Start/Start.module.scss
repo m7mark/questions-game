@@ -6,11 +6,11 @@
   }
 
   > .friends {
-    @apply mt-8 w-3/4 max-w-[300px] sm:hidden;
+    @apply mt-16 w-3/4 max-w-[300px] sm:hidden;
   }
 
   > .title {
-    @apply -mt-16 sm:mt-0 sm:mb-16;
+    @apply sm:mt-0 sm:mb-16;
 
     > h2 {
       @apply text-5xl leading-[1.1] sm:text-7xl sm:leading-tight;
@@ -18,7 +18,7 @@
   }
 
   > button {
-    @apply btn text-5xl rounded-full mb-8 p-6 sm:mb-0;
+    @apply btn text-5xl rounded-full mb-16 p-6 sm:mb-0;
 
     > svg {
       @apply pl-1;
