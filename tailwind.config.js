@@ -30,11 +30,9 @@ module.exports = {
     plugin(function ({ addBase, addComponents, theme }) {
       addBase({
         h2: {
-          fontSize: theme('fontSize.2xl'),
+          fontSize: '1.75rem',
           fontWeight: 'bold',
           textAlign: 'center',
-          paddingRight: '0.5rem',
-          paddingLeft: '0.5rem',
           color: theme('colors.white'),
         },
       })
