@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { FC } from 'react'
 import styles from './Start.module.scss'
 import friends from '../../../assets/imgs/friends.svg'
-import { FaPlayCircle, FaInfoCircle } from 'react-icons/fa'
+import { FaInfoCircle, FaPlay } from 'react-icons/fa'
 import { useKeyPress } from '../../../hooks/useKeys'
 
 export const Start: FC = () => {
@@ -30,7 +30,7 @@ export const Start: FC = () => {
         <h2>вопросы</h2>
       </div>
       <button onClick={() => router.push('questions')}>
-        <FaPlayCircle />
+        <FaPlay />
       </button>
     </div>
   )

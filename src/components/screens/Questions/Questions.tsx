@@ -23,13 +23,13 @@ export const Questions: FC = () => {
       <h2>{currentQuestion}</h2>
       <div className={styles.buttons}>
         <button onClick={() => setQuestion('prev')} disabled={num <= 1}>
-          <FaChevronLeft />
+          <FaChevronLeft style={{ paddingRight: '4px' }} />
         </button>
         <button
           onClick={() => setQuestion('next')}
           disabled={num >= countElements}
         >
-          <FaChevronRight />
+          <FaChevronRight style={{ paddingLeft: '4px' }} />
         </button>
       </div>
     </div>
