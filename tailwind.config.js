@@ -63,6 +63,25 @@ module.exports = {
             },
           },
         },
+        '.fill-hover': {
+          fill: theme('colors.gray.500'),
+          transition: 'fill .2s ease-in-out',
+          '&:disabled': {
+            opacity: '0.3',
+            pointerEvents: 'none',
+          },
+          '@media (hover: hover)': {
+            '&:hover': {
+              fill: theme('colors.gray.400'),
+            },
+          },
+          '@media screen and (max-width: 430px)': {
+            transitionProperty: 'none',
+            '&:active': {
+              fill: theme('colors.gray.400'),
+            },
+          },
+        },
       })
     }),
   ],

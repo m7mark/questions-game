@@ -2,7 +2,7 @@
   @apply h-full flex flex-col items-center justify-between sm:justify-center;
 
   > .info {
-    @apply absolute top-6 left-6 text-4xl fill-gray-500 hover:fill-gray-400 transition-colors;
+    @apply absolute top-6 left-6 text-4xl fill-hover;
   }
 
   > .friends {
