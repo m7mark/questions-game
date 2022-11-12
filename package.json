@@ -1,7 +1,9 @@
 {
   "name": "questions-game",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "license": "MIT",
+  "author": "Mark Pavlov <m7mark@yandex.ru> (https://github.com/m7mark)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
