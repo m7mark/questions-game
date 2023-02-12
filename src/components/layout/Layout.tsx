@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { PropsWithChildren } from 'react'
-import { use100vh } from 'react-div-100vh'
+import Div100vh from 'react-div-100vh'
 import { useThemeContext } from '../../context/theme-context'
 import { Header } from './Header/Header'
 import { HeaderSeo } from './Header/HeaderSeo'
@@ -8,8 +8,6 @@ import styles from './Layout.module.scss'
 
 export const Layout = ({ children }: PropsWithChildren) => {
   const { theme } = useThemeContext()
-  const height = use100vh()
-  const fullHeight = height ? `${height - 1}px` : '100vh'
 
   // if (!theme) return null
 
@@ -24,7 +22,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
       >
         <HeaderSeo />
         <Header />
-        <div style={{ height: fullHeight }}>{children}</div>
+        <Div100vh>{children}</Div100vh>
       </div>
     </div>
   )
