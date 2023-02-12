@@ -5,8 +5,12 @@
     @apply absolute top-6 left-6 text-4xl fill-hover;
   }
 
+  > .toggle {
+    @apply absolute top-6 left-16;
+  }
+
   > .friends {
-    @apply mt-16 w-3/4 max-w-[300px] sm:hidden;
+    @apply mt-16 sm:hidden;
   }
 
   > .title {

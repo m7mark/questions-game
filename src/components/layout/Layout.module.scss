@@ -2,6 +2,13 @@
   @apply flex justify-center;
 
   > .layoutWrapper {
-    @apply relative w-full px-5 select-none;
+    @apply relative w-full px-5 select-none bg-cover bg-no-repeat bg-right;
+  }
+
+  > .bgDark {
+    background-image: url('../../assets/imgs/bgImgBlack.svg');
+  }
+  > .bgWhite {
+    background-image: url('../../assets/imgs/bgImgWhite.svg');
   }
 }

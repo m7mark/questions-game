@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { FaArrowCircleLeft, FaGithub } from 'react-icons/fa'
@@ -6,7 +7,7 @@ import styles from './Info.module.scss'
 export const Info: FC = () => {
   const { push } = useRouter()
   return (
-    <div className={styles.info}>
+    <div className={clsx(styles.info, 'text-gray-500 dark:text-gray-100')}>
       <FaArrowCircleLeft className={styles.back} onClick={() => push('/')} />
       <div className={styles.about}>
         Это не столько вопросы, как отличные темы для интересной беседы,

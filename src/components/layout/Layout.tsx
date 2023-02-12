@@ -1,30 +1,30 @@
-import { FC, ReactNode } from 'react'
+import clsx from 'clsx'
+import { PropsWithChildren } from 'react'
+import { use100vh } from 'react-div-100vh'
+import { useThemeContext } from '../../context/theme-context'
 import { Header } from './Header/Header'
 import { HeaderSeo } from './Header/HeaderSeo'
 import styles from './Layout.module.scss'
-import Div100vh from 'react-div-100vh'
-import Image from 'next/image'
-import bgImg from '../../assets/imgs/bgImg.svg'
 
-interface ILayout {
-  children: ReactNode
-}
+export const Layout = ({ children }: PropsWithChildren) => {
+  const { theme } = useThemeContext()
+  const height = use100vh()
+  const fullHeight = height ? `${height - 1}px` : '100vh'
 
-export const Layout: FC<ILayout> = ({ children }) => {
+  // if (!theme) return null
+
   return (
     <div className={styles.layout}>
-      <div className={styles.layoutWrapper}>
-        <Image
-          alt=""
-          src={bgImg}
-          fill
-          style={{ objectFit: 'cover', zIndex: '-3' }}
-          priority
-          sizes="(max-width: 768px) 100vw"
-        />
+      <div
+        className={clsx(
+          styles.layoutWrapper,
+          [theme === 'dark' ? styles.bgDark : styles.bgWhite],
+          [theme === 'dark' && 'dark']
+        )}
+      >
         <HeaderSeo />
         <Header />
-        <Div100vh>{children}</Div100vh>
+        <div style={{ height: fullHeight }}>{children}</div>
       </div>
     </div>
   )

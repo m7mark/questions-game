@@ -1,5 +1,5 @@
 .info {
-  @apply h-full flex flex-col items-center justify-center text-gray-100 font-bold text-center;
+  @apply h-full flex flex-col items-center justify-center font-bold text-center;
 
   > .back {
     @apply absolute top-6 left-6 text-4xl fill-hover;

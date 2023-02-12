@@ -3,6 +3,7 @@ const plugin = require('tailwindcss/plugin')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  darkMode: 'class',
   content: ['./pages/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   theme: {
     colors: {
@@ -33,7 +34,6 @@ module.exports = {
           fontSize: '1.75rem',
           fontWeight: 'bold',
           textAlign: 'center',
-          color: theme('colors.white'),
         },
       })
       addComponents({
