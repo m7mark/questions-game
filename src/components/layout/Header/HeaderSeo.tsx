@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import { FC } from 'react'
+import { useThemeContext } from '../../../context/theme-context'
 
 export const HeaderSeo: FC = () => {
+  const { theme } = useThemeContext()
+
   return (
     <Head>
       <meta
@@ -24,6 +27,24 @@ export const HeaderSeo: FC = () => {
         property="og:description"
         content="Вопросы на знакомство. Игра для небольшой компании"
       />
+      {theme === 'dark' ? (
+        <>
+          <meta name="msapplication-TileColor" content="#151419" />
+          <meta name="theme-color" content={'#151419'} />
+          <meta name="msapplication-navbutton-color" content={'#151419'} />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content={'#151419'}
+          />
+        </>
+      ) : (
+        <>
+          <meta name="msapplication-TileColor" content="#fff" />
+          <meta name="theme-color" content={'#fff'} />
+          <meta name="msapplication-navbutton-color" content={'#fff'} />
+          <meta name="apple-mobile-web-app-status-bar-style" content={'#fff'} />
+        </>
+      )}
     </Head>
   )
 }
