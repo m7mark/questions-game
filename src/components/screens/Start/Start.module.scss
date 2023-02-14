@@ -10,10 +10,10 @@
   }
 
   > .startBtn {
-    @apply text-5xl rounded-full p-6 sm:px-12;
+    @apply text-5xl rounded-full p-6 sm:px-12 ring-8 ring-white;
 
     > svg {
-      @apply pl-1;
+      @apply pl-2;
     }
   }
 }

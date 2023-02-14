@@ -40,11 +40,12 @@ module.exports = {
       })
       addComponents({
         '.btn': {
+          outline: 'none',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: theme('colors.viola.800'),
-          color: theme('colors.white'),
+          backgroundColor: theme('colors.gray.200'),
+          color: theme('colors.gray.600'),
           fontSize: theme('fontSize.xl'),
           transition: 'background-color .2s ease-in-out',
           '&:disabled': {
@@ -53,13 +54,13 @@ module.exports = {
           },
           '@media (hover: hover)': {
             '&:hover': {
-              backgroundColor: theme('colors.viola.700'),
+              backgroundColor: theme('colors.gray.300'),
             },
           },
           '@media screen and (max-width: 430px)': {
             transitionProperty: 'none',
             '&:active': {
-              backgroundColor: theme('colors.viola.700'),
+              backgroundColor: theme('colors.gray.300'),
             },
           },
         },

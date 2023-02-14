@@ -10,10 +10,10 @@
   }
 
   > .buttonsWrapper {
-    @apply flex w-full gap-4 justify-between sm:justify-center sm:gap-28;
+    @apply flex w-full gap-28 justify-center sm:gap-28;
 
     > .button {
-      @apply text-5xl rounded-full p-6;
+      @apply outline-none text-5xl  rounded-full p-4 ring-2 ring-white;
     }
   }
 }
