@@ -39,10 +39,13 @@ export const HeaderSeo: FC = () => {
         </>
       ) : (
         <>
-          <meta name="msapplication-TileColor" content="#fff" />
-          <meta name="theme-color" content={'#fff'} />
-          <meta name="msapplication-navbutton-color" content={'#fff'} />
-          <meta name="apple-mobile-web-app-status-bar-style" content={'#fff'} />
+          <meta name="msapplication-TileColor" content="#fafafa" />
+          <meta name="theme-color" content={'#fafafa'} />
+          <meta name="msapplication-navbutton-color" content={'#fafafa'} />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content={'#fafafa'}
+          />
         </>
       )}
     </Head>
