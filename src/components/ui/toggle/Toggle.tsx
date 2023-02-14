@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { ChangeEvent } from 'react'
-import { useThemeContext } from '../../../../context/theme-context'
+import { useThemeContext } from '../../../context/theme-context'
 import styles from './Toggle.module.scss'
 import { ToggleProps } from './Toggle.props'
 

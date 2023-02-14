@@ -1,0 +1,6 @@
+.nav {
+  @apply absolute top-6 left-6;
+  > .icon {
+    @apply text-4xl fill-hover;
+  }
+}

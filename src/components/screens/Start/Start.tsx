@@ -1,22 +1,20 @@
+import clsx from 'clsx'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
-import { FaInfoCircle, FaPlay } from 'react-icons/fa'
+import { FaPlay } from 'react-icons/fa'
 import FriendsImage from '../../../assets/imgs/friends.svg'
 import { useKeyPress } from '../../../hooks/useKeys'
+import { NavButton, Toggle } from '../../ui'
 import styles from './Start.module.scss'
-import { Toggle } from './Toogle/Toggle'
 
 export const Start: FC = () => {
-  const router = useRouter()
+  const { push } = useRouter()
 
-  useKeyPress(() => router.push('questions'), ['Enter', ' '])
+  useKeyPress(() => push('questions'), ['Enter', ' '])
 
   return (
     <div className={styles.start}>
-      <FaInfoCircle
-        className={styles.infoIcon}
-        onClick={() => router.push('info')}
-      />
+      <NavButton icon="info" />
       <Toggle className={styles.toggle} />
       <FriendsImage draggable={false} className="sm:hidden mt-4" />
       <div className="text-black dark:text-white">
@@ -24,7 +22,10 @@ export const Start: FC = () => {
         <h2 className="bg-viola-300 dark:bg-viola-400">интересные</h2>
         <h2>вопросы</h2>
       </div>
-      <button onClick={() => router.push('questions')}>
+      <button
+        className={clsx(styles.startBtn, 'btn dark:btn-dark')}
+        onClick={() => push('questions')}
+      >
         <FaPlay />
       </button>
     </div>

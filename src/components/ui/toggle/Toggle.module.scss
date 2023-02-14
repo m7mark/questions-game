@@ -8,7 +8,7 @@
 }
 
 .toggle {
-  @apply bg-slate-800;
+  @apply bg-viola-800;
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -42,9 +42,9 @@
 
 .star1 {
   top: 5px;
-  left: 25px;
+  left: 29px;
   z-index: 0;
-  width: 30px;
+  width: 25px;
   height: 3px;
 }
 
@@ -90,7 +90,7 @@
 
 input:checked {
   + .toggle {
-    @apply bg-slate-600;
+    @apply bg-viola-600;
 
     .toggleHandler {
       @apply bg-viola-400;
@@ -100,6 +100,7 @@ input:checked {
     .star1 {
       width: 3px;
       height: 3px;
+      transform: translate3d(-5px, 0, 0);
     }
 
     .star2 {
