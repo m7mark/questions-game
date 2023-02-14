@@ -11,8 +11,11 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
+      slate: colors.slate,
       dark: '#151419',
       viola: {
+        300: '#ea71ff',
+        400: '#9c27b0',
         600: '#605c70',
         700: '#484554',
         800: '#302e38',
@@ -41,7 +44,7 @@ module.exports = {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: theme('colors.viola.800'),
+          backgroundColor: theme('colors.slate.800'),
           color: theme('colors.white'),
           fontSize: theme('fontSize.xl'),
           transition: 'background-color .2s ease-in-out',
@@ -51,13 +54,13 @@ module.exports = {
           },
           '@media (hover: hover)': {
             '&:hover': {
-              backgroundColor: theme('colors.viola.700'),
+              backgroundColor: theme('colors.slate.700'),
             },
           },
           '@media screen and (max-width: 430px)': {
             transitionProperty: 'none',
             '&:active': {
-              backgroundColor: theme('colors.viola.700'),
+              backgroundColor: theme('colors.slate.700'),
             },
           },
         },

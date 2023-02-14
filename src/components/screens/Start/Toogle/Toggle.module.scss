@@ -8,17 +8,18 @@
 }
 
 .toggle {
+  @apply bg-slate-800;
   cursor: pointer;
   display: inline-block;
   position: relative;
   width: 62px;
   height: 36px;
-  background-color: #0b3f58;
   border-radius: 90px - 6;
   transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .toggleHandler {
+  @apply bg-viola-300;
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -26,7 +27,6 @@
   left: 4px;
   width: 29px;
   height: 29px;
-  background-color: #ea71ff;
   border-radius: 50px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -34,8 +34,8 @@
 }
 
 .star {
+  @apply bg-white;
   position: absolute;
-  background-color: #ffffff;
   transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
   border-radius: 50%;
 }
@@ -90,10 +90,10 @@
 
 input:checked {
   + .toggle {
-    background-color: #4f5866;
+    @apply bg-slate-600;
 
     .toggleHandler {
-      background-color: #9c27b0;
+      @apply bg-viola-400;
       transform: translate3d(24px, 0, 0) rotate(0);
     }
 

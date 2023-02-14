@@ -1,7 +1,7 @@
 .start {
-  @apply h-full flex flex-col items-center justify-between sm:justify-center;
+  @apply h-full flex flex-col items-center justify-between sm:justify-center sm:gap-16 py-12;
 
-  > .info {
+  > .infoIcon {
     @apply absolute top-6 left-6 text-4xl fill-hover;
   }
 
@@ -9,20 +9,12 @@
     @apply absolute top-6 right-6;
   }
 
-  > .friends {
-    @apply mt-16 sm:hidden;
-  }
-
-  > .title {
-    @apply sm:mt-0 sm:mb-16;
-
-    > h2 {
-      @apply text-5xl leading-[1.1] sm:text-7xl sm:leading-tight;
-    }
+  h2 {
+    @apply text-5xl leading-[1.1] sm:text-7xl sm:leading-tight;
   }
 
   > button {
-    @apply btn text-5xl rounded-full mb-8 p-6 sm:mb-0 sm:px-12;
+    @apply btn text-5xl rounded-full p-6 sm:px-12;
 
     > svg {
       @apply pl-1;
