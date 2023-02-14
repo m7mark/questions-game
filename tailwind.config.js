@@ -15,6 +15,7 @@ module.exports = {
       viola: {
         300: '#ea71ff',
         400: '#9325A6',
+        500: '#7f1092',
         600: '#605c70',
         700: '#484554',
         800: '#302e38',
@@ -68,8 +69,8 @@ module.exports = {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: theme('colors.viola.700'),
-          color: theme('colors.white'),
+          backgroundColor: theme('colors.viola.800'),
+          color: theme('colors.gray.400'),
           fontSize: theme('fontSize.xl'),
           transition: 'background-color .2s ease-in-out',
           '&:disabled': {
@@ -78,13 +79,13 @@ module.exports = {
           },
           '@media (hover: hover)': {
             '&:hover': {
-              backgroundColor: theme('colors.viola.600'),
+              backgroundColor: theme('colors.viola.700'),
             },
           },
           '@media screen and (max-width: 430px)': {
             transitionProperty: 'none',
             '&:active': {
-              backgroundColor: theme('colors.viola.600'),
+              backgroundColor: theme('colors.viola.700'),
             },
           },
         },
