@@ -2,7 +2,6 @@ import clsx from 'clsx'
 import { PropsWithChildren } from 'react'
 import Div100vh from 'react-div-100vh'
 import { useThemeContext } from '../../context/theme-context'
-import { Header } from './Header/Header'
 import { HeaderSeo } from './Header/HeaderSeo'
 import styles from './Layout.module.scss'
 
@@ -21,7 +20,6 @@ export const Layout = ({ children }: PropsWithChildren) => {
         )}
       >
         <HeaderSeo />
-        <Header />
         <Div100vh>{children}</Div100vh>
       </div>
     </div>
