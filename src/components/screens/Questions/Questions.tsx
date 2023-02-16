@@ -1,13 +1,15 @@
 import clsx from 'clsx'
 import { FC } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { CSSTransition } from 'react-transition-group'
 import { useKeyPress } from '../../../hooks/useKeys'
 import { NavButton } from '../../ui'
 import styles from './Questions.module.scss'
 import { useQuestions } from './useQuestions'
 
 export const Questions: FC = () => {
-  const { num, countElements, currentQuestion, setQuestion } = useQuestions()
+  const { num, countElements, currentQuestion, setQuestion, slideIn } =
+    useQuestions()
 
   useKeyPress(() => setQuestion('prev'), ['ArrowLeft'])
   useKeyPress(() => setQuestion('next'), ['ArrowRight', ' '])
@@ -18,7 +20,15 @@ export const Questions: FC = () => {
       <div
         className={clsx(styles.counter, 'text-gray-500 dark:text-gray-300')}
       >{`${num}/${countElements}`}</div>
-      <h2 className="text-black dark:text-white">{currentQuestion}</h2>
+
+      <CSSTransition
+        in={slideIn}
+        timeout={300}
+        classNames="slide-animation"
+        unmountOnExit
+      >
+        <h2 className="text-black dark:text-white">{currentQuestion}</h2>
+      </CSSTransition>
       <div className={styles.buttonsWrapper}>
         <button
           className={clsx(styles.button, 'btn dark:btn-dark')}
