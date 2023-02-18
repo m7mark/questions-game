@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-import { FC } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { CSSTransition } from 'react-transition-group'
 import { useKeyPress } from '../../../hooks/useKeys'
@@ -7,7 +6,7 @@ import { NavButton } from '../../ui'
 import styles from './Questions.module.scss'
 import { useQuestions } from './useQuestions'
 
-export const Questions: FC = () => {
+export const Questions = () => {
   const { num, countElements, currentQuestion, setQuestion, slideIn } =
     useQuestions()
 

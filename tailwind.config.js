@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require('tailwindcss/plugin')
 const colors = require('tailwindcss/colors')
+const bgLight = '#fafafa'
+const bgDark = '#151419'
 
 module.exports = {
   darkMode: 'class',
   content: ['./pages/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   theme: {
     colors: {
+      bgLight,
+      bgDark,
       transparent: 'transparent',
       black: colors.black,
       white: colors.white,
@@ -19,6 +23,7 @@ module.exports = {
         600: '#605c70',
         700: '#484554',
         800: '#302e38',
+        900: '#25222a',
       },
     },
     extend: {
@@ -31,7 +36,7 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ addBase, addComponents, theme }) {
+    plugin(({ addBase, addComponents, addUtilities, theme }) => {
       addBase({
         h2: {
           fontSize: '1.75rem',
@@ -107,6 +112,13 @@ module.exports = {
               fill: theme('colors.viola.600'),
             },
           },
+        },
+      })
+      addUtilities({
+        '.flex-center': {
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
         },
       })
     }),

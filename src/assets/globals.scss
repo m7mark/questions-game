@@ -15,19 +15,16 @@ body {
 
 /* Slide animation */
 .slide-animation-enter {
-  opacity: 0.2;
-  transform: translateX(-1%);
+  opacity: 0;
 }
 .slide-animation-enter-active {
   opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms;
 }
 .slide-animation-exit {
   opacity: 1;
 }
 .slide-animation-exit-active {
-  opacity: 0.1;
-  /* transform: translateY(10%); */
-  transition: opacity 300ms, transform 300ms;
+  opacity: 0;
+  transition: opacity 300ms;
 }

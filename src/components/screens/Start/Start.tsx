@@ -1,31 +1,44 @@
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
-import { FC, useState } from 'react'
+import { useState } from 'react'
 import { FaInfo, FaPlay } from 'react-icons/fa'
+import { CSSTransition } from 'react-transition-group'
 import FriendsImage from '../../../assets/imgs/friends.svg'
 import { useKeyPress } from '../../../hooks/useKeys'
-import { Toggle } from '../../ui'
+import { Toggle as ToggleTheme } from '../../ui'
+import { Info } from './Info/Info'
 import styles from './Start.module.scss'
 
-export const Start: FC = () => {
+export const Start = () => {
   const { push } = useRouter()
 
   useKeyPress(() => push('questions'), ['Enter', ' '])
-  const [showInfo, setShowInfo] = useState(false)
-  const handleClick = () => {
-    setShowInfo((prev) => !prev)
-  }
+  const [showInfo, setShowInfo] = useState<boolean>(false)
 
   return (
     <div className={styles.start}>
       <button
-        className={clsx(styles.info, [showInfo && styles.openedInfo])}
-        onClick={handleClick}
+        className={clsx(
+          styles.infoButton,
+          'bg-white dark:bg-viola-900',
+          'text-gray-200 dark:text-viola-800',
+          [showInfo && styles.infoButtonActive]
+        )}
+        onClick={() => !showInfo && setShowInfo(true)}
       >
-        <FaInfo />
+        <FaInfo className="text-gray-900 dark:text-gray-200" />
       </button>
-      {/* <NavButton icon="info" /> */}
-      <Toggle className={styles.toggle} />
+      <CSSTransition
+        in={showInfo}
+        timeout={300}
+        classNames="slide-animation"
+        unmountOnExit
+      >
+        <div className={styles.infoWrapper}>
+          <Info close={() => setShowInfo(false)} />
+        </div>
+      </CSSTransition>
+      <ToggleTheme className={styles.toggle} />
       <FriendsImage draggable={false} className="sm:hidden mt-4" />
       <div className="text-black dark:text-white">
         <h2>Самые</h2>

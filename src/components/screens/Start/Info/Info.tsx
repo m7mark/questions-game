@@ -1,16 +1,18 @@
 import clsx from 'clsx'
-import { FC } from 'react'
 import { FaGithub } from 'react-icons/fa'
-import { NavButton } from '../../ui'
+import { MdClose } from 'react-icons/md'
 import styles from './Info.module.scss'
 
-export const Info: FC = () => {
+interface InfoProps {
+  close: () => void
+}
+
+export const Info = ({ close }: InfoProps) => {
   return (
     <div className={clsx(styles.info, 'text-gray-800 dark:text-gray-100')}>
-      <NavButton icon="back" />
+      <MdClose onClick={close} className={styles.close} />
       <div className={styles.about}>Попробуй не проиграть)</div>
-      <div className={styles.creator}>
-        <span>Написано на Next.js</span>
+      <div className={styles.author}>
         <a
           className={clsx(
             styles.link,
