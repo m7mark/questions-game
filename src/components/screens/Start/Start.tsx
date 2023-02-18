@@ -18,12 +18,9 @@ export const Start = () => {
   return (
     <div className={styles.start}>
       <button
-        className={clsx(
-          styles.infoButton,
-          'bg-bgLight dark:bg-bgDark',
-          'text-gray-300 md:text-gray-400 dark:text-viola-700',
-          [showInfo && styles.infoButtonActive]
-        )}
+        className={clsx(styles.infoButton, 'bg-bgLight dark:bg-bgDark', [
+          showInfo && styles.infoButtonActive,
+        ])}
         onClick={() => !showInfo && setShowInfo(true)}
       >
         <FaInfo className="text-gray-900 dark:text-gray-200" />

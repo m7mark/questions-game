@@ -2,9 +2,9 @@
   @apply h-full flex flex-col items-center justify-between sm:justify-center sm:gap-16 py-12;
 
   > .infoButton {
-    @apply absolute left-6 top-8 w-10 h-10 border-none cursor-pointer overflow-hidden z-20 focus:outline-none;
+    @apply absolute left-6 top-8 w-10 h-10 border-none text-gray-400 cursor-pointer overflow-hidden z-20 focus:outline-none;
     border-radius: 50%;
-    box-shadow: 0 0 6px 0px;
+    box-shadow: 0 0 4px 0px;
     transition-property: left, top, width, height, border-radius, box-shadow;
     transition-duration: 0.8s;
     transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -28,7 +28,7 @@
   }
 
   > .toggle {
-    @apply absolute top-8 right-6 z-10;
+    @apply absolute top-[2.125rem] right-6 z-10;
   }
 
   h2 {
