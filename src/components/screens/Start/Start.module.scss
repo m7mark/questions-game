@@ -4,8 +4,8 @@
   > .infoButton {
     @apply absolute left-6 top-8 w-10 h-10 border-none cursor-pointer overflow-hidden z-20 focus:outline-none;
     border-radius: 50%;
-    box-shadow: 2px 1px 18px 0;
-    transition-property: left, top, width, height, border-radius;
+    box-shadow: 0 0 3px 1px;
+    transition-property: left, top, width, height, border-radius, box-shadow;
     transition-duration: 0.8s;
     transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
     > svg {
@@ -17,7 +17,7 @@
   }
 
   > .infoButtonActive {
-    @apply w-full h-full top-0 left-0 rounded-none;
+    @apply w-full h-full top-0 left-0 rounded-none shadow-none;
     > svg {
       @apply -top-5 -left-5 opacity-0;
     }

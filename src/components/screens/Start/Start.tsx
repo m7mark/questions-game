@@ -21,7 +21,7 @@ export const Start = () => {
         className={clsx(
           styles.infoButton,
           'bg-bgLight dark:bg-bgDark',
-          'text-gray-300 dark:text-viola-800',
+          'text-gray-300 md:text-gray-400 dark:text-viola-700',
           [showInfo && styles.infoButtonActive]
         )}
         onClick={() => !showInfo && setShowInfo(true)}
