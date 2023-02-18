@@ -1,20 +1,30 @@
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
-import { FC } from 'react'
-import { FaPlay } from 'react-icons/fa'
+import { FC, useState } from 'react'
+import { FaInfo, FaPlay } from 'react-icons/fa'
 import FriendsImage from '../../../assets/imgs/friends.svg'
 import { useKeyPress } from '../../../hooks/useKeys'
-import { NavButton, Toggle } from '../../ui'
+import { Toggle } from '../../ui'
 import styles from './Start.module.scss'
 
 export const Start: FC = () => {
   const { push } = useRouter()
 
   useKeyPress(() => push('questions'), ['Enter', ' '])
+  const [showInfo, setShowInfo] = useState(false)
+  const handleClick = () => {
+    setShowInfo((prev) => !prev)
+  }
 
   return (
     <div className={styles.start}>
-      <NavButton icon="info" />
+      <button
+        className={clsx(styles.info, [showInfo && styles.openedInfo])}
+        onClick={handleClick}
+      >
+        <FaInfo />
+      </button>
+      {/* <NavButton icon="info" /> */}
       <Toggle className={styles.toggle} />
       <FriendsImage draggable={false} className="sm:hidden mt-4" />
       <div className="text-black dark:text-white">

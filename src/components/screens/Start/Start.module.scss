@@ -1,8 +1,57 @@
 .start {
   @apply h-full flex flex-col items-center justify-between sm:justify-center sm:gap-16 py-12;
 
+  > .info {
+    z-index: 20;
+    position: absolute;
+    left: 1.5rem;
+    top: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+    box-shadow: 1px 1px 20px 0 rgba(#000, 0.5);
+    cursor: pointer;
+    background: #fff;
+    font-size: 1rem;
+    color: #09203f;
+    transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1),
+      transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+      box-shadow 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    overflow: hidden;
+
+    // &:hover {
+    //   box-shadow: 0 0 0 0 rgba(#000, 0.5);
+    // }
+    &:focus {
+      outline: 0;
+    }
+
+    > svg {
+      transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+      left: 12px;
+      top: 12px;
+      position: absolute;
+      opacity: 1;
+    }
+  }
+
+  .openedInfo {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+
+    > svg {
+      top: -20px;
+      left: -20px;
+      opacity: 0;
+    }
+  }
+
   > .toggle {
-    @apply absolute top-6 right-6;
+    @apply absolute top-8 right-6 z-10;
   }
 
   h2 {
