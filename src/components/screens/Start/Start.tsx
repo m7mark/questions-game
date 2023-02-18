@@ -20,8 +20,8 @@ export const Start = () => {
       <button
         className={clsx(
           styles.infoButton,
-          'bg-white dark:bg-viola-900',
-          'text-gray-200 dark:text-viola-800',
+          'bg-bgLight dark:bg-bgDark',
+          'text-gray-300 dark:text-viola-800',
           [showInfo && styles.infoButtonActive]
         )}
         onClick={() => !showInfo && setShowInfo(true)}

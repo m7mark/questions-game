@@ -10,7 +10,7 @@
     transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   > .close {
-    @apply fixed cursor-pointer top-10 right-10 w-10 h-10 sm:w-12 sm:h-12;
+    @apply fixed cursor-pointer top-10 left-10 w-10 h-10 sm:w-12 sm:h-12;
     animation-delay: 1.1s;
   }
 
