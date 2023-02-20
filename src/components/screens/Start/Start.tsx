@@ -39,7 +39,7 @@ export const Start = () => {
       <FriendsImage draggable={false} className="sm:hidden mt-4" />
       <div className="text-black dark:text-white">
         <h2>Самые</h2>
-        <h2 className="bg-[#083755] text-white dark:text-black dark:bg-[#b3e2ff]">
+        <h2 className="bg-[#302e38] text-white dark:text-black dark:bg-[#c5c2d4]">
           интересные
         </h2>
         <h2>вопросы</h2>
