@@ -1,6 +1,13 @@
 .questions {
   @apply h-full flex flex-col justify-between items-center py-12;
 
+  > .backButton {
+    @apply btn-shadow absolute left-6 top-8 w-10 h-10 z-20 text-gray-400 focus:outline-none flex-center;
+    > svg {
+      @apply opacity-100 text-2xl pr-[0.1rem];
+    }
+  }
+
   > .counter {
     @apply font-bold ml-4 -mt-2 md:text-xl;
   }

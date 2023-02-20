@@ -94,6 +94,13 @@ module.exports = {
             },
           },
         },
+        '.btn-shadow': {
+          borderStyle: 'none',
+          cursor: 'pointer',
+          overflow: 'hidden',
+          borderRadius: '50%',
+          boxShadow: '0 0 4px 0px',
+        },
         '.fill-hover': {
           fill: theme('colors.viola.700'),
           transition: 'fill .2s ease-in-out',

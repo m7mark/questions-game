@@ -1,8 +1,8 @@
 import clsx from 'clsx'
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { useRouter } from 'next/router'
+import { FaAngleLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { CSSTransition } from 'react-transition-group'
 import { useKeyPress } from '../../../hooks/useKeys'
-import { NavButton } from '../../ui'
 import styles from './Questions.module.scss'
 import { useQuestions } from './useQuestions'
 
@@ -10,12 +10,19 @@ export const Questions = () => {
   const { num, countElements, currentQuestion, setQuestion, slideIn } =
     useQuestions()
 
+  const { push } = useRouter()
   useKeyPress(() => setQuestion('prev'), ['ArrowLeft'])
   useKeyPress(() => setQuestion('next'), ['ArrowRight', ' '])
 
   return (
     <div className={styles.questions}>
-      <NavButton icon="back" />
+      <button
+        className={clsx(styles.backButton, 'bg-bgLight dark:bg-bgDark', [])}
+        onClick={() => push('/')}
+      >
+        <FaAngleLeft className="text-gray-900 dark:text-gray-200" />
+      </button>
+      {/* <NavButton icon="back" /> */}
       <div
         className={clsx(styles.counter, 'text-gray-500 dark:text-gray-300')}
       >{`${num}/${countElements}`}</div>

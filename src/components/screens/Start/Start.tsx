@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { FaInfo, FaPlay } from 'react-icons/fa'
+import { FaInfo } from 'react-icons/fa'
 import { CSSTransition } from 'react-transition-group'
 import FriendsImage from '../../../assets/imgs/friends.svg'
 import { useKeyPress } from '../../../hooks/useKeys'
@@ -39,14 +39,19 @@ export const Start = () => {
       <FriendsImage draggable={false} className="sm:hidden mt-4" />
       <div className="text-black dark:text-white">
         <h2>Самые</h2>
-        <h2 className="bg-viola-300 dark:bg-viola-400">интересные</h2>
+        <h2 className="bg-[#083755] text-white dark:text-black dark:bg-[#b3e2ff]">
+          интересные
+        </h2>
         <h2>вопросы</h2>
       </div>
       <button
-        className={clsx(styles.startBtn, 'btn dark:btn-dark')}
+        className={clsx(
+          styles.startBtn,
+          'bg-viola-400 text-white dark:text-black dark:bg-viola-300'
+        )}
         onClick={() => push('questions')}
       >
-        <FaPlay />
+        Let&apos;s go
       </button>
     </div>
   )

@@ -2,9 +2,7 @@
   @apply h-full flex flex-col items-center justify-between sm:justify-center sm:gap-16 py-12;
 
   > .infoButton {
-    @apply absolute left-6 top-8 w-10 h-10 border-none text-gray-400 cursor-pointer overflow-hidden z-20 focus:outline-none;
-    border-radius: 50%;
-    box-shadow: 0 0 4px 0px;
+    @apply btn-shadow absolute left-6 top-8 w-10 h-10 text-gray-400 z-20 focus:outline-none;
     transition-property: left, top, width, height, border-radius, box-shadow;
     transition-duration: 0.8s;
     transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -36,9 +34,6 @@
   }
 
   > .startBtn {
-    @apply text-5xl rounded-full p-4 sm:px-12 sm:p-6 ring-8 ring-white;
-    > svg {
-      @apply pl-2;
-    }
+    @apply flex-center uppercase font-semibold text-3xl rounded-full px-5 py-3 sm:px-12 sm:py-5 sm:text-4xl;
   }
 }
