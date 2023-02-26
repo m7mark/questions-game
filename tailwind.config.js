@@ -53,7 +53,7 @@ module.exports = {
           backgroundColor: theme('colors.gray.200'),
           color: theme('colors.gray.600'),
           fontSize: theme('fontSize.xl'),
-          transition: 'background-color .2s ease-in-out',
+          transition: 'all .2s ease-in-out',
           '&:disabled': {
             opacity: '0.3',
             pointerEvents: 'none',
@@ -77,7 +77,7 @@ module.exports = {
           backgroundColor: theme('colors.viola.800'),
           color: theme('colors.gray.400'),
           fontSize: theme('fontSize.xl'),
-          transition: 'background-color .2s ease-in-out',
+          transition: 'all .2s ease-in-out',
           '&:disabled': {
             opacity: '0.4',
             pointerEvents: 'none',
