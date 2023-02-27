@@ -31,16 +31,17 @@ export const Questions = () => {
         >
           {/* <NavButton icon="back" /> */}
           <div
-            className={clsx(styles.counter, 'text-gray-500 dark:text-gray-300')}
+            className={clsx(styles.counter, 'text-gray-600 dark:text-gray-300')}
           >{`${num}/${countElements}`}</div>
 
           <motion.div
             layout
             key={currentQuestion}
-            initial={{ x: 20, opacity: 0.5 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ opacity: 0.7 }}
+            animate={{ opacity: 1 }}
+            className={styles.textWrapper}
           >
-            <h2 className="text-black dark:text-white">{currentQuestion}</h2>
+            <h2 className="text-black dark:text-gray-100">{currentQuestion}</h2>
           </motion.div>
 
           <div className={styles.buttonsWrapper}>

@@ -3,6 +3,7 @@
 
   > .layoutWrapper {
     @apply relative w-full px-5 select-none bg-cover bg-no-repeat bg-[88%];
+    transition: background-image ease-in-out 50ms;
   }
 
   > .bgDark {
