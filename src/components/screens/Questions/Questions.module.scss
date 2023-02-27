@@ -13,7 +13,7 @@
   }
 
   .textWrapper {
-    @apply block p-6 rounded-2xl sm:max-w-xl md:max-w-2xl xl:max-w-4xl;
+    @apply p-1 sm:p-6 rounded-2xl sm:max-w-xl md:max-w-2xl xl:max-w-4xl;
 
     > h2 {
       @apply text-2xl px-2  leading-9 sm:text-4xl md:text-5xl md:leading-tight;

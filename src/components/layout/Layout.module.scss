@@ -3,7 +3,10 @@
 
   > .layoutWrapper {
     @apply relative w-full px-5 select-none bg-cover bg-no-repeat bg-[88%];
-    transition: all ease-in-out 60ms;
+    transition: background-image ease-in-out 50ms;
+    @media screen and (max-width: 430px) {
+      transition-property: none;
+    }
   }
 
   > .bgDark {
