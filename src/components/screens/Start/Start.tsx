@@ -48,14 +48,14 @@ export const Start = () => {
           </AnimatePresence>
 
           <ToggleTheme className={styles.toggle} />
-          <FriendsImage draggable={false} className="sm:hidden mt-4" />
+          <FriendsImage draggable={false} className="mt-4 sm:hidden" />
           <div className="text-black dark:text-white">
             <h2>Матрёшка</h2>
           </div>
           <button
             className={clsx(
               styles.startBtn,
-              'bg-viola-400 text-white dark:text-black dark:bg-viola-300'
+              'bg-viola-400 text-white dark:bg-viola-300 dark:text-black'
             )}
             onClick={() => push('questions')}
           >

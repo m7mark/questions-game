@@ -1,7 +1,7 @@
 .header {
-  @apply hidden absolute top-2 left-2 w-full text-gray-400 text-[12px];
+  @apply absolute left-2 top-2 hidden w-full text-[12px] text-gray-400;
 
   > svg {
-    @apply inline mb-[0.1rem];
+    @apply mb-[0.1rem] inline;
   }
 }

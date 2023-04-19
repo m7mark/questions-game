@@ -1,5 +1,5 @@
 .info {
-  @apply font-bold text-center;
+  @apply text-center font-bold;
 
   .about,
   .author,
@@ -10,7 +10,7 @@
     transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   > .close {
-    @apply fixed cursor-pointer top-10 left-10 w-10 h-10 sm:w-12 sm:h-12;
+    @apply fixed left-10 top-10 h-10 w-10 cursor-pointer sm:h-12 sm:w-12;
     animation-delay: 1.1s;
   }
 
@@ -20,11 +20,11 @@
   }
 
   > .author {
-    @apply text-xl sm:text-2xl md:text-3xl text-gray-500 pt-2 sm:pt-4;
+    @apply pt-2 text-xl text-gray-500 sm:pt-4 sm:text-2xl md:text-3xl;
     animation-delay: 1.1s;
 
     > .link {
-      @apply cursor-pointer transition-colors whitespace-nowrap;
+      @apply cursor-pointer whitespace-nowrap transition-colors;
 
       background-image: linear-gradient(
         -225deg,
@@ -47,7 +47,7 @@
         }
       }
       > svg {
-        @apply inline mb-1;
+        @apply mb-1 inline;
       }
     }
   }

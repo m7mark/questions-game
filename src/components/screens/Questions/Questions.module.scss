@@ -1,30 +1,30 @@
 .backButton {
-  @apply btn-shadow absolute left-6 top-8 w-10 h-10 z-20 text-gray-400 focus:outline-none flex-center;
+  @apply btn-shadow absolute left-6 top-8 z-20 h-10 w-10 text-gray-400 flex-center focus:outline-none;
   > svg {
-    @apply opacity-100 text-2xl pr-[0.1rem];
+    @apply pr-[0.1rem] text-2xl opacity-100;
   }
 }
 
 .questions {
-  @apply h-full flex flex-col justify-between items-center py-12;
+  @apply flex h-full flex-col items-center justify-between py-12;
 
   > .counter {
-    @apply font-bold ml-4 -mt-2 md:text-xl;
+    @apply -mt-2 ml-4 font-bold md:text-xl;
   }
 
   .textWrapper {
-    @apply p-1 sm:p-6 rounded-2xl sm:max-w-xl md:max-w-2xl xl:max-w-4xl;
+    @apply rounded-2xl p-1 sm:max-w-xl sm:p-6 md:max-w-2xl xl:max-w-4xl;
 
     > h2 {
-      @apply text-2xl px-2  leading-9 sm:text-4xl md:text-5xl md:leading-tight;
+      @apply px-2 text-2xl  leading-9 sm:text-4xl md:text-5xl md:leading-tight;
     }
   }
 
   > .buttonsWrapper {
-    @apply flex w-full gap-24 justify-center sm:gap-28;
+    @apply flex w-full justify-center gap-24 sm:gap-28;
 
     > .button {
-      @apply text-5xl rounded-full p-4;
+      @apply rounded-full p-4 text-5xl;
     }
   }
 }
