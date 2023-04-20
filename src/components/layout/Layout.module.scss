@@ -10,9 +10,11 @@
   }
 
   > .bgDark {
+    @apply bg-bgDark;
     background-image: url('../../assets/imgs/bgImgBlack.svg');
   }
   > .bgWhite {
+    @apply bg-bgLight;
     background-image: url('../../assets/imgs/bgImgWhite.svg');
   }
 }
